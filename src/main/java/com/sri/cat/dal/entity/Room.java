@@ -6,13 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
 @Table(name = "ROOM")
 @Data
+@Builder
 public class Room {
 
     @Id
@@ -21,15 +22,12 @@ public class Room {
     private long roomId;
 
     @Column(name = "NAME")
-    @NotNull
     private String name;
 
     @Column(name = "ROOM_NUMBER")
-    @NotNull
     private String roomNumber;
 
     @Column(name = "BED_INFO")
-    @NotNull
     private String bedInfo;
 
 }

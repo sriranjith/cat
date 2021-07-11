@@ -30,4 +30,9 @@ public class BookingResource {
         model.addAttribute("myRoom", recordRepository.getRoomsByRoomId(id));
         return "reservations";
     }
+
+    @GetMapping("/login")
+    public String getLogin() {
+        return "login";
+    }
 }
